@@ -13,7 +13,7 @@ ENV HOME /home/$USER
 WORKDIR $HOME
 # making the $USER owner of node_modules dir to avoid permission errors
 RUN chown -R $USER /usr/local/lib/node_modules/
-RUN npm install -g gulp bower grunt-cli
+RUN npm install -g gulp-cli bower grunt-cli
 # switching to the non-root user
 USER $USER
 RUN sudo npm install -g yo
